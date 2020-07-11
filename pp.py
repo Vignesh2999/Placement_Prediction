@@ -1,4 +1,4 @@
-#Final 2
+
 import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt 
@@ -72,7 +72,7 @@ for i in range(l):
   # if(i in droplist):
   #   continue
   t=0
-  if(  not(pd.isnull(f["Company"][i])) and (f["Company"][i]!=" " and f["Company"][i]!="#N/A") ):
+  if(not(pd.isnull(f["Company"][i])) and (f["Company"][i]!=" " and f["Company"][i]!="#N/A") ):
     t+=1
 #   if( not(pd.isnull(f["Placed Company2"][i]))):
 #     t+=1
@@ -177,11 +177,11 @@ while(1):
   
   x1/=10
   x1=int(round(x1,2))
-  y1=round(m*x1,5)*0.632959465275843
+  y1=round(m*x1,5)
   
   plot_regression_line(x, y, b,x1,y1) 
   print("X1 ",x1)
-  print("Your Probability of getting placed is",y1*100," Percentage")  #*0.8038462435
+  print("Your Probability of getting placed is",y1*100," Percentage") 
   ran=int(input("Enter 1 to calculate range or 0 to not"))
   
   if(ran):
@@ -203,12 +203,8 @@ while(1):
       x1=cgpa*T1+ssl*T2+hsc*T3
       x1/=11.2
       x1=int(round(x1,2))
-      y1=round(m*x1,5)*0.632959465275843
+      y1=round(m*x1,5)
 
       if(y1>0.5):
         placeCount+=1
     print("Count : ",placeCount)
-
-
-
-#Final 2
